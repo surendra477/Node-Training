@@ -1,0 +1,35 @@
+{
+    "employee": {
+        "name": "sonoo",
+        "salary": 56000,
+        "married": true,
+        "info-data":"none"
+    },
+    "employees": {
+        "name": "sonoo",
+        "salary": 56000,
+        "married": true
+    },
+    "jare": {
+        "name": "sonoo",
+        "salary": 56000,
+        "married": true
+    },
+    "emhployee": {
+        "name": "sonoo",
+        "salary": 56000,
+        "married": true
+    },
+    "emp54loyees": {
+        "name": "sonoo",
+        "salary": 56000,
+        "married": true
+    },
+    "jafre": {
+        "name": "sonoo",
+        "salary": 56000,
+        "married": true
+    }
+
+    
+}

@@ -1,0 +1,46 @@
+[
+    {
+        "id":1,
+        "name":"surendra naidu",
+        "email":"surendraediga477@gmail.com",
+        "address":{
+            "street":"naik nagar",
+            "city":"mumbai",
+            "pincode":400022
+        }
+        
+    },
+    {
+        "id": 2,
+        "name": "bhaskar naidu",
+        "email": "surendraediga477@gmail.com",
+        "address": {
+            "street": "naik nagar",
+            "city": "mumbai",
+            "pincode": 400022
+        }
+
+    },
+    {
+        "id": 3,
+        "name": "mahalakshmi naidu",
+        "email": "surendraediga477@gmail.com",
+        "address": {
+            "street": "naik nagar",
+            "city": "mumbai",
+            "pincode": 400022
+        }
+
+    },
+     {
+         "id": 4,
+         "name": "divya naidu",
+         "email": "surendraediga477@gmail.com",
+         "address": {
+             "street": "naik nagar",
+             "city": "mumbai",
+             "pincode": 400022
+         }
+
+     }
+]

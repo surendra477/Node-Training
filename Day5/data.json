@@ -1,0 +1,17 @@
+{
+    "heroes": [{
+            "title": "Batman",
+            "power": 7,
+            "city": "Gotham",
+            "fname": "Bruce",
+            "lname": "Wayne"
+        },
+        {
+            "title": "Superman",
+            "power": 9,
+            "city": "Metropolis",
+            "fname": "Clark",
+            "lname": "Kent"
+        }
+    ]
+}

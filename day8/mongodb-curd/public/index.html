@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./lib/jquery-3.6.0.js"></script>
+    <script>
+        $(function() {
+            
+             
+           $("#addBtn").on("click",function(){
+              let friendName = $("#friendName");
+              let friendCity = $("#friendCity");
+              if(friendName.val() && friendCity.val())
+              {
+                    let friend ={
+                        "name" :friendName.val(),
+                        "city" :friendCity.val()
+                    }
+
+                     $.ajax({
+                         url:'/datas',
+                         method:"post",
+                         data:JSON.stringify(friend),
+                         dataType:"json",
+                         contentType:"application/json",
+                         success: function(res){
+                             friendName.val("")
+                             friendCity.val("")
+                             refresh()
+                         },
+                         error: function(error){
+                             console.log(error)
+                         }
+                     })
+              }
+           })
+        })
+
+        function refresh(){
+             $(".box").text("")
+             $.ajax({
+             url: "/data",
+             success: function (res) {
+             // $("#q").text(JSON.stringify(res))
+             // console.log(typeof(res))
+             let userData = res;
+             console.log(userData)
+             userData.forEach(function (user) {
+             // console.log(user.name)
+             $(".box").append('<li>' + user.name + "</li>")
+             })
+
+             }
+             })
+        }
+    </script>
+    <style>
+        label{
+            display: inline-block;
+            width: 40px;
+            margin: 5px;
+        }
+        button{
+            display: block;
+            margin-left: 52px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Wellcome to user data application</h1>
+    <div>
+        <label for="friendName">Name</label>
+        <input type="text" id="friendName">
+        <br>
+        <label for="friendCity">City</label>
+        <input type="text" id="friendCity">
+        <button id="addBtn">Add Friend</button>
+    </div>
+    <ol class="box">
+
+    </ol>
+</body>
+
+</html>

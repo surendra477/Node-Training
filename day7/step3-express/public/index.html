@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./lib/jquery-3.6.0.js"></script>
+    <script>
+        jQuery(function () {
+            $("button:first").on("click", function () {
+                $.ajax({
+                    url: "/data",
+                    success: function (res) {
+                        //   $("#q").text(JSON.stringify(res))
+                        //     console.log(typeof(res))
+                        let userData = res;
+                        console.log(userData)
+                        userData.forEach(function (user) {
+                            // console.log(user.name)
+                            $(".box").append('<li>' + user.name + "</li>")
+                        })
+
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <h1>Wellcome to user dashboard </h1>
+    <button>get data </button>
+    <ol class="box">
+
+    </ol>
+</body>
+
+</html>
